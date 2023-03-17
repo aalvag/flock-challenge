@@ -1,0 +1,10 @@
+import { render, screen } from "@testing-library/react";
+import Header from "./Header";
+
+describe("Header", () => {
+  test("renders title", () => {
+    render(<Header />);
+    const titleElement = screen.getByText(/Descubre Tu Provincia/i);
+    expect(titleElement).toBeInTheDocument();
+  });
+});

@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Challenge Técnico - Desarrollo FrontEnd React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es una aplicación en React que permite visualizar los datos obtenidos por la API pública [georef-ar-api](https://datosgobar.github.io/georef-ar-api/), la cual devuelve la latitud y longitud de provincias por nombre.
 
-## Available Scripts
+## Requerimientos
 
-In the project directory, you can run:
+Para este proyecto se utilizaron las siguientes herramientas y tecnologías:
 
-### `npm start`
+- React
+- React Context API para el manejo del estado
+- [Mapbox](https://www.mapbox.com/) para la visualización del mapa
+- `SWR` para el manejo de las peticiones
+- `Material-UI` para el diseño de la aplicación
+- `react-testing-library` para la realización de tests unitarios
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Instrucciones
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para correr la aplicación, se deben seguir los siguientes pasos:
 
-### `npm test`
+1.  Clonar el repositorio
+2.  Obtener una API Key de [Mapbox](https://www.mapbox.com/)
+3.  Crear un archivo `.env` en la raíz del proyecto con el siguiente contenido:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+        REACT_APP_MAPBOX_TOKEN=<API_KEY>
+        REACT_APP_API_URL=https://apis.datos.gob.ar/georef/api/provincias
 
-### `npm run build`
+4.  Instalar las dependencias con `npm install`
+5.  Correr el comando `npm start` para iniciar la aplicación en modo desarrollo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Estructura del Proyecto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+La estructura del proyecto se encuentra organizada de la siguiente manera:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `src/`: Contiene el código fuente de la aplicación
+  - `components/`: Contiene los componentes de la aplicación
+  - `contexts/`: Contiene los contextos utilizados para el manejo del estado
+  - `hooks/`: Contiene los hooks utilizados en la aplicación
+  - `constants/`: Contiene las constantes utilizadas en la aplicación
 
-### `npm run eject`
+## Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Para correr los tests de la aplicación, se debe ejecutar el siguiente comando:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    npm test
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Demo
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para ver una demostración de la aplicación, se puede acceder a la siguiente URL:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
